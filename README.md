@@ -1,15 +1,19 @@
 # ScratchCardCompose
-A customizable scratch card component built with Jetpack Compose, which allows users to "scratch" an overlay image to reveal a base image underneath. This component can be tailored with options for scratch line style, threshold percentage, and more.
+A customizable scratch card component built with Jetpack Compose, based on masking techniques, which allows users to "scratch" an overlay image to reveal a base image underneath.
 
 ## ⭐️Features
 ### Main Screen 
-- **Scratch Overlay Masking:** The overlay image uses masking with transparency and blend modes to simulate realistic scratching effects.
+- **Scratch Overlay Masking:** The overlay image uses masking with transparency and blend modes to simulate scratching effects.
   - The ``BlendMode.Clear`` ensures the scratched pixels are completely erased.
   - ``CompositingStrategy.Offscreen`` ensures that the base image remains unaffected by masking.
   
 - **Threshold Control:** Define the percentage of the overlay that needs to be scratched to reveal the base image.
 
 - **State Management:** The component tracks whether the card has been fully scratched and triggers a callback when it's complete.
+
+## Here are some overview videos:
+![1](https://github.com/user-attachments/assets/95a3ed0a-d98b-49af-9149-c68091bdd041)
+![2](https://github.com/user-attachments/assets/e85662d1-dc63-498a-963b-1d4a5bb674c9)
 
 ## Installation
 To use this component in your Jetpack Compose project, simply copy the ``ScratchCard``  composable into your project and customize it with your own images and configurations.
@@ -52,11 +56,6 @@ The scratch card uses a layered rendering approach:
 | `isScratched`                 | Flag to determine if the scratch card is fully scratched. If true, no further scratching is possible.        | `false`               |
 | `onScratchComplete`           | Callback triggered when the scratch card is fully scratched, meaning the threshold has been reached.         | `{}` (empty lambda)   |
 | `shape`                       | The shape of the scratch card, typically a rounded rectangle or custom shape.                                | `RoundedCornerShape(12.dp)` |
-
-
-## Here are some overview videos:
-![1](https://github.com/user-attachments/assets/95a3ed0a-d98b-49af-9149-c68091bdd041)
-![2](https://github.com/user-attachments/assets/e85662d1-dc63-498a-963b-1d4a5bb674c9)
 
 ## Requirements
 Minimum version: Android 7.0 (API level 24) or later📱
