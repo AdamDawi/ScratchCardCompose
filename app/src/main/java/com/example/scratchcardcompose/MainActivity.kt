@@ -7,8 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.scratchcardcompose.ui.HomeScreen
-import com.example.scratchcardcompose.ui.screen_examples.ScratchCardScreenExampleLidl
-import com.example.scratchcardcompose.ui.screen_examples.ScratchCardScreenExampleMovie
+import com.example.scratchcardcompose.ui.screen_with_example.ScratchCardScreenExampleLidl
+import com.example.scratchcardcompose.ui.screen_with_example.ScratchCardScreenExampleMovie
 import com.example.scratchcardcompose.ui.theme.ScratchCardComposeTheme
 
 class MainActivity : ComponentActivity() {

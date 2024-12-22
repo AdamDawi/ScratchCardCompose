@@ -1,4 +1,4 @@
-package com.example.scratchcardcompose.ui.screen_examples
+package com.example.scratchcardcompose.ui.screen_with_example
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -58,6 +58,7 @@ fun ScratchCardScreenExampleLidl() {
             isScratched = isCardScratched.value,
             shape = RoundedCornerShape(3.dp),
             scratchLineWidth = 26.dp,
+            scratchingThresholdPercentage = 0.7f
         )
         Button(
             modifier = Modifier

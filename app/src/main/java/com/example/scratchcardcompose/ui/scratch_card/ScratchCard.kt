@@ -35,7 +35,20 @@ import com.example.scratchcardcompose.ui.theme.ScratchCardComposeTheme
 import kotlin.math.pow
 import kotlin.math.sqrt
 
-
+/**
+ * A customizable scratch card component that allows users to "scratch" an overlay image by dragging their finger over it.
+ * It reveals a base image beneath the overlay as the user interacts with the screen.
+ *
+ * @param modifier Modifier to be applied to the ScratchCard.
+ * @param overlayImage The image that will be scratched off by the user, typically a texture or effect that will be revealed underneath.
+ * @param baseImage The base image that will be revealed after the overlay is scratched off.
+ * @param scratchingThresholdPercentage The percentage of the area that needs to be scratched off to show the base image.
+ * @param scratchLineWidth The width of the scratch lines drawn when the user drags their finger across the overlay.
+ * @param scratchLineCap The shape of the stroke cap applied to the scratch lines (e.g., Round, Square).
+ * @param isScratched Flag that determines whether the scratch card has already been fully scratched. If true, the card is fully scratched and no further scratching is possible.
+ * @param onScratchComplete A callback that is triggered when the scratch card is fully scratched, meaning the threshold has been reached.
+ * @param shape The shape of the scratch card, typically a rounded rectangle or custom shape.
+ */
 @Composable
 fun ScratchCard(
     modifier: Modifier = Modifier,
@@ -70,7 +83,8 @@ fun ScratchCard(
         Box(
             modifier = Modifier
                 .graphicsLayer {
-                    compositingStrategy = CompositingStrategy.Offscreen
+                    compositingStrategy = CompositingStrategy.Offscreen //Without it, all the pixels (in this example baseImage) drawn underneath scratchLines will be cleared with scratchLines
+                    //now baseImage is considered as a separate layer and masking can be applied
                 }
         ) {
             Canvas(
@@ -120,7 +134,7 @@ fun ScratchCard(
                             end = line.end,
                             strokeWidth = line.strokeWidth,
                             cap = scratchLineCap,
-                            blendMode = BlendMode.Clear
+                            blendMode = BlendMode.Clear //clears the pixels covered by the source in the destination
                         )
                     }
                 }else{
@@ -155,7 +169,7 @@ private data class Line(
 
 @Composable
 @Preview
-fun ImageScratchPreview() {
+private fun ImageScratchPreview() {
     ScratchCardComposeTheme {
         ScratchCard(
             overlayImage = ImageBitmap.imageResource(R.drawable.scratch_here_overlay),
