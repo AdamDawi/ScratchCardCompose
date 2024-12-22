@@ -1,4 +1,4 @@
-package com.example.scratchcardcompose.ui.examples
+package com.example.scratchcardcompose.ui.screen_examples
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

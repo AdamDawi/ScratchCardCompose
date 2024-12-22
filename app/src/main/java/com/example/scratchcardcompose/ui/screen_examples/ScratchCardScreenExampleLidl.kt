@@ -1,4 +1,4 @@
-package com.example.scratchcardcompose.ui.examples
+package com.example.scratchcardcompose.ui.screen_examples
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
