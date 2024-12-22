@@ -3,7 +3,7 @@ package com.example.scratchcardcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.scratchcardcompose.ui.ScreenExampleOfScratchCard
+import com.example.scratchcardcompose.ui.examples.ScratchCardScreenExampleLidl
 import com.example.scratchcardcompose.ui.theme.ScratchCardComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -11,7 +11,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ScratchCardComposeTheme {
-               ScreenExampleOfScratchCard()
+//               ScreenExampleOfScratchCard()
+                ScratchCardScreenExampleLidl()
             }
         }
     }

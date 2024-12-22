@@ -1,4 +1,4 @@
-package com.example.scratchcardcompose.ui
+package com.example.scratchcardcompose.ui.examples
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -25,7 +25,7 @@ import com.example.scratchcardcompose.ui.scratch_card.ScratchCard
 import com.example.scratchcardcompose.ui.theme.ScratchCardComposeTheme
 
 @Composable
-fun ScreenExampleOfScratchCard() {
+fun ScratchCardScreenExampleMovie() {
     val isCardScratched = remember { mutableStateOf(false) }
     Column(
         modifier = Modifier
@@ -74,6 +74,6 @@ fun RestartButton(onRestart: () -> Unit) {
 @Composable
 fun ScreenExamplePreview() {
     ScratchCardComposeTheme {
-        ScreenExampleOfScratchCard()
+        ScratchCardScreenExampleMovie()
     }
 }
