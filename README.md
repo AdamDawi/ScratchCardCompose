@@ -1,5 +1,5 @@
 # ScratchCardCompose
-A customizable scratch card component built with Jetpack Compose, based on masking techniques, which allows users to "scratch" an overlay image to reveal a base image underneath. You can see this component in action [here](https://github.com/AdamDawi/Popcorn-Picks).
+A customizable scratch card component built with Jetpack Compose, based on masking techniques, which allows users to "scratch" an overlay image to reveal a base image underneath. You can see this component in full project [here](https://github.com/AdamDawi/Popcorn-Picks).
 
 ## ⭐️Features
 ### Main Screen 
